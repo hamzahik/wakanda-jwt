@@ -67,7 +67,7 @@ exports.sign	= function( header , claims , secret ){
 function getSignature( header , claims , secret ){
 	
 	var algoName	= header.alg;	
-	var jwa			= require( 'JWT/modules/jwa' );
+	var jwa			= require( './modules/jwa' );
 	var algo		= jwa( algoName );
 	
 	var h			= base64url.encode( JSON.stringify( header ) );
